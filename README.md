@@ -2,6 +2,8 @@
 
 This is a repository for the paper by Lapsansky, Zatz, and Tobalske under the name **Alcids ‘fly’ at efficient Strouhal numbers in both air and water but vary stroke velocity and angle** currently **IN REVIEW** at eLife. The data should therefore be considered preliminary until the paper is officially released. At that point, this warning will be removed.
 
+## IN REVIEW AT  eLIFE
+
 ### Navigating the Data
 
 Within the "data" folder there are three folders: *Parallel*, *Perp*, and *Scripts*. 
@@ -12,9 +14,9 @@ The *Perp* folder contains data corresponding to flights of birds flying (in air
 
 Within each of these folders are the combined data from all parallel or perpendicular flights, the data used for creating the associated figures, and the raw and combined digitized points in form of Excel files. We decided to preserve the Excel file format so that you (the reviewers or the public) can check the formulas used for computing things like stroke angle and chord angle. 
 
-The "Scripts" folder contains the MatLab and Igor Pro scripts used for data analysis and plotting. The code is heavily commented, but I might have missed some things, so let me know if you have questions!
+The *Scripts* folder contains the MatLab and Igor Pro scripts used for data analysis and plotting. The code is heavily commented, but I might have missed some things, so let me know if you have questions!
 
-
+## IN REVIEW AT  eLIFE
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 

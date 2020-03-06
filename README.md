@@ -2,7 +2,7 @@
 
 This is a repository for the paper by Lapsansky, Zatz, and Tobalske under the name **Alcids ‘fly’ at efficient Strouhal numbers in both air and water but vary stroke velocity and angle** currently **IN REVIEW** at eLife. The data should therefore be considered preliminary until the paper is officially released. At that point, this warning will be removed.
 
-## IN REVIEW AT  eLIFE
+## In review @  eLife - Data should be considered preliminary!
 
 ### Navigating the Data
 
@@ -16,7 +16,7 @@ Within each of these folders are the combined data from all parallel or perpendi
 
 The *Scripts* folder contains the MatLab and Igor Pro scripts used for data analysis and plotting. The code is heavily commented, but I might have missed some things, so let me know if you have questions!
 
-## IN REVIEW AT  eLIFE
+## In review @  eLife - Data should be considered preliminary!
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 

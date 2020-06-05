@@ -37,7 +37,7 @@ st.mean <- tapply(Perp_Aq$strouhal, list(Perp_Aq$type, Perp_Aq$Species), mean) #
 st.mean
 tapply(Perp_Aq$strouhal, list(Perp_Aq$type, Perp_Aq$Species), sd) # output the sd of each species by condition
 
-
+##########################################################################################################################################
 # test for stroke velocity  ##############################################################################################################
 
 
@@ -113,7 +113,7 @@ us.statistic
 us.parameter
 us.pvalue
 
-
+##########################################################################################################################
 # Amplitude ##############################################################################################################
 
 tapply(Para$Amplitude, list(Para$Fluid, Para$Species), mean)
@@ -133,7 +133,8 @@ Amplitude.Tukey <- TukeyHSD(Amplitude)
 Amplitude.Tukey$`Species:Fluid`[c(4,11,17,22),]
 
 
-##############################################################################
+###########################################################################################################################
+# output some useful summary information on stroke durations
 
 downDur.mean <- tapply(Para$downduration, list(Para$Species, Para$Fluid), mean)
 downDur.mean
@@ -147,8 +148,8 @@ tapply(Para$upduration, list(Para$Species, Para$Fluid), sd)
 
 with(Para, interaction.plot(Fluid,Species,upduration))
 
-
-# Test for the relationship between stroke angle (i.e. stroke plane angle) and fluid medium (air vs water) #########################################
+############################################################################################################################
+# Test for the relationship between stroke angle (i.e. stroke plane angle) and fluid medium (air vs water) #################
 
 StrokeAngle.all <- aov(log(strokeAngle)~Species+fluid, data = Fig5_all[c(-5),]) #interaction not significant
 outlierTest(StrokeAngle.all)
@@ -166,7 +167,7 @@ with(Fig5_all, interaction.plot(x.factor = fluid, Species, response = strokeAngl
 tapply(Fig5_all$strokeAngle, list(Fig5_all$type), mean)
 tapply(Fig5_all$strokeAngle, list(Fig5_all$type), sd)
 
-# Test for the relationship between stroke angle in water and angle of descent #####################################################################
+# Test for the relationship between stroke angle in water and angle of descent #############################################
 
 StrokeAngle.aquatic <- lm(log(strokeAngle)~Species*descentAngle, data = Fig5_aquatic)
 outlierTest(StrokeAngle.aquatic)
@@ -176,7 +177,8 @@ eta_sq(StrokeAngle.aquatic)
 
 #plot(StrokeAngle.aquatic)
 
-# Tests for relationship between chord angle and angle of descent ##################################################################################
+############################################################################################################################
+# Tests for relationship between chord angle and angle of descent ##########################################################
 
 upChordAngle <- lm(log(upstrokeChordAngle)~Species+descentAngle, data = Fig6) # interaction not significant
 outlierTest(upChordAngle)

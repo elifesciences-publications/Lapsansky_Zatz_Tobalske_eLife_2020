@@ -41,7 +41,7 @@ h.geom_polygon('y',{[0.2 0.4]},'color',[0.5 0.5 0.5]);
 h.geom_vline('xintercept',14.5, 'style', 'k:')
 h.geom_vline('xintercept',27.5, 'style', 'k:')
 h.geom_vline('xintercept',40.5 ,'style', 'k:')
-h.geom_polygon('y',{[0.13 0.47]},'color',[0.35 0.35 0.35]);
+h.geom_polygon('y',{[0.12 0.47]},'color',[0.35 0.35 0.35]);
 h.set_names('x','','y','Strouhal Number')
 
 h.draw()
@@ -77,11 +77,6 @@ a.draw()
 set(0,'ShowHiddenHandles','on') 
 set(findobj(gcf,'Type','text'),'Interpreter','tex')
 
-% Statistical tests for stroke velocity versus fluid with species as a 
-% random effect on the intercept.
-
-lme = fitlme (Figure3, 'upstrokeVelocity~Fluid+(1|Species)')
-lme = fitlme (Figure3, 'downstrokeVelocity~Fluid+(1|Species)')
 
 %% Figure 5
 
@@ -92,32 +87,18 @@ lme = fitlme (Figure3, 'downstrokeVelocity~Fluid+(1|Species)')
 clear e
 figure(5)
 
-e(1,1)=gramm('x',Figure5_allData.descentAngle,'y', Figure5_allData.strokeAngle, 'subset', Figure5_allData.fluid=='air', 'color', Figure5_allData.Species)
+e(1,1)=gramm('x',Figure5.descentAngle,'y', Figure5.strokeAngle, 'subset', Figure5.fluid=='air', 'color', Figure5.Species)
 e(1,1).geom_jitter()
 e(1,1).set_names('x','Aerial flight','y','Chord Angle (deg)')
 e(1,1).axe_property('YLim',[60 120], 'XLim', [-1 1]);
 e(1,1).set_layout_options('legend',false)
 
-e(1,2)=gramm('x',Figure5_allData.descentAngle,'y', Figure5_allData.strokeAngle, 'subset', Figure5_allData.fluid=='water', 'color', Figure5_allData.Species)
+e(1,2)=gramm('x',Figure5.descentAngle,'y', Figure5.strokeAngle, 'subset', Figure5.fluid=='water', 'color', Figure5.Species)
 e(1,2).geom_point()
 e(1,2).set_names('x','Aquatic flight descent angle (deg)','y','Chord Angle (deg)')
 e(1,2).axe_property('YLim',[60 120], 'XLim', [-10 60]);
 e.set_point_options('base_size',7.5)
 e.draw()
-
-% Statistical tests for stroke angle versus fluid with species as a random
-% effect on the intercept
-lme = fitlme (Figure5_allData, 'strokeAngle~fluid+(1|Species)')
-
-% Statistical tests for stroke angle versus angle of descent treated as
-% both a categorical variable ("type") and continuous variable
-% ("descentAngle"), with species as a random effect on the intercept
-
-% Categorical
-lme = fitlme (Figure5_aquaticData, 'strokeAngle~type+(1|Species)')
-
-% Continuous
-lme = fitlme (Figure5_aquaticData, 'strokeAngle~descentAngle+(1|Species)')
 
 
 %% Figure 6
@@ -141,16 +122,4 @@ c(2,1).set_title('Downstroke','FontSize',12)
 c.set_point_options('base_size',7.5)
 c.axe_property('YLim',[0 60]);
 c.draw()
-
-% Statistical tests for chord angle versus angle of descent treated as
-% either a categorical variable ("type") or continuous variable
-% ("descentAngle"),  with species as a random effect on the intercept.
-
-% Categorical treatment
-lme = fitlme (Figure6, 'upstrokeChordAngle~type+(1|Species)')
-lme = fitlme (Figure6, 'downstrokeChordAngle~type+(1|Species)')
-
-% Continuous treatment
-lme = fitlme (Figure6, 'upstrokeChordAngle~descentAngle+(1|Species)')
-lme = fitlme (Figure6, 'downstrokeChordAngle~descentAngle+(1|Species)')
 

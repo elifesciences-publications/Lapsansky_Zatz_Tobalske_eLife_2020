@@ -8,7 +8,7 @@ library(sjstats)
 
 #Read in the important excel sheets - Note: The exact files paths are likely different on your system ####################################
 
-Perp_Aq = read_excel(path = 'Perp/AquaticKinData_perp.xlsx', sheet = 'runAverages') 
+Perp_Aq = read_excel(path = 'Perp/AquaticKinData_perp.xlsx', sheet = 'runAverages')
 Para = read_excel(path = 'Parallel/CombinedKinData_parallel.xlsx')
 Fig5_all = read_excel(path = 'Perp/Figure5_SourceData.xlsx', sheet = 'allData')
 Fig5_aquatic = read_excel(path = 'Perp/Figure5_SourceData.xlsx', sheet = 'aquaticData')

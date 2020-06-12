@@ -57,8 +57,8 @@ text(-8,1,'Tufted puffin','FontSize',16);
 % Plots stroke velocity from the file named "Figure 3 - Source Data"
 % Also compute statistical tests for stroke velocity.
 
-%blue color =0.00,0.45,0.74
-%red color= 1.00,0.37,0.41
+% NOTE: Some visual aspects of the figure were edited in Adobe Illustrator 
+% to enhance readability.
 
 clear a
 figure(3)
@@ -83,6 +83,8 @@ set(findobj(gcf,'Type','text'),'Interpreter','tex')
 % this section is for plotting stroke angle using the file
 % 'Figure 5 - Source Data'
 
+% NOTE: Some visual aspects of the figure were edited in Adobe Illustrator 
+% to enhance readability.
 
 clear e
 figure(5)
@@ -105,8 +107,8 @@ e.draw()
 
 % plots the chord angle data from the file named "Figure 6 - Source Data"
 
-%green color = 0.03,0.71,0.29
-%blue color =0.00,0.45,0.74
+% NOTE: Some visual aspects of the figure were edited in Adobe Illustrator 
+% to enhance readability.
 
 clear c
 figure(6)
